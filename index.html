@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zmija</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <h1>🐍 Zmija</h1>
+<h1>🐍 Zmija</h1>
+<div>Score: <span id="score">0</span></div>
 
-    <p>Bodovi: <span id="score">0</span></p>
+<div id="board"></div>
 
-    <div id="board"></div>
+<div id="gameOver"></div>
+<button id="novaIgra" style="display:none;">Nova igra</button>
 
-    <p id="gameOver"></p>
-
-    <button id="novaIgra" style="display:none;">
-        Nova igra
-    </button>
-
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>

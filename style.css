@@ -1,31 +1,50 @@
 body {
-    background: #1f2937;
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: radial-gradient(circle at top, #0f172a, #020617);
     color: white;
-    text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: system-ui, sans-serif;
 }
 
+/* BOARD - KLJUČ FIX */
 #board {
     width: 400px;
     height: 400px;
-    margin: 20px auto;
 
     display: grid;
-    grid-template-columns: repeat(20, 1fr);
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
 
-    background: #374151;
-    border: 3px solid white;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+
+    overflow: hidden;
 }
 
+/* CELLS */
 .cell {
     width: 20px;
     height: 20px;
+
+    background: rgba(255, 255, 255, 0.02);
 }
 
+/* SNAKE */
 .snake {
-    background: limegreen;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border-radius: 6px;
 }
 
+/* FOOD - BEZ ANIMACIJE (FIX TREPERENJA) */
 .food {
     display: flex;
     align-items: center;
@@ -33,16 +52,27 @@ body {
     font-size: 14px;
 }
 
+/* GAME OVER */
 #gameOver {
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: 20px;
+    margin-top: 10px;
+    font-size: 24px;
     color: #ef4444;
 }
 
-#novaIgra {
-    margin-top: 15px;
+/* BUTTON */
+button {
+    margin-top: 10px;
     padding: 10px 20px;
-    font-size: 16px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #3b82f6;
+    color: white;
+
     cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
 }
