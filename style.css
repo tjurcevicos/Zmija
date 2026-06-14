@@ -13,16 +13,20 @@ body {
 }
 
 #board {
-    width: 500px;
-    height: 500px;
+    width: 650px;
+    height: 650px;
 
     display: grid;
-    grid-template-columns: repeat(25, 20px);
-    grid-template-rows: repeat(25, 20px);
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: repeat(25, 1fr);
 
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     overflow: hidden;
+}
+
+.cell {
+    background: rgba(255, 255, 255, 0.02);
 }
 
 .cell {
